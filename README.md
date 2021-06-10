@@ -1,3 +1,3 @@
 # simply_backups
 
-This is CLI backup application for Unix based machines.
+This is a CLI backup application for Unix based machines.
