@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# INPUT:
+# Copyright 2021 Carlos Miller
 
-# tar -cf TARGET.tar ~/SOURCE/
-# bzip TARGET.tar
+# simply-backups
+# Beta Release Candidate 1
+# By Carlos Miller
 
 BACKUP_DIR="/home/$USER/Backups"
 
