@@ -32,12 +32,21 @@ do
         else
             echo -e "$item \\t DIR"
         fi
-    else # FILES
+    elif [[ -f $item ]]
+    then # FILES
         if [[ ${#item} -lt 7 ]]
         then
             echo -e "$item \\t\\t FILE"
         else
             echo -e "$item \\t FILE"
+        fi
+    else
+        if [[ ${#item} -lt 7 ]]
+        then
+            echo -e "$item \\t\\t NULL"
+        else
+            echo -e "$item \\t NULL"
+        # REMOVE NULL ITEMS FROM $INCLUDE
         fi
     fi
     # Add each item and it's contents to a temporary directory.
@@ -49,8 +58,8 @@ echo -e "\\n[x] Copied relevant data to $BACKUP_DIR/temp"
 echo -e "[x] Archiving files with tar..."
 BACKUP_NAME=$( date +"backup_%Y-%W.tar" )
 echo "[*] Backup name: $BACKUP_NAME"
-tar -cf $BACKUP_DIR/$BACKUP_NAME $BACKUP_DIR/temp
+# tar -cf $BACKUP_DIR/$BACKUP_NAME $BACKUP_DIR/temp
 echo "[x] Archive made"
 echo "[x] Compressing backup for long term storage..."
-bzip2 $BACKUP_DIR/$BACKUP_NAME
+# bzip2 $BACKUP_DIR/$BACKUP_NAME
 echo "[x] Compressed"
