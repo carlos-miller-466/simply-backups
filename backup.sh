@@ -5,7 +5,8 @@
 # tar -cf TARGET.tar ~/SOURCE/
 # bzip TARGET.tar
 
-BACKUP_DIR=/home/carlos/Backups
+BACKUP_DIR="/home/$USER/Backups"
+
 if [[ -d $BACKUP_DIR ]]; then
     echo '[x] Backup Directory'
 else
