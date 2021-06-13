@@ -20,6 +20,7 @@ fi
 INCLUDE='Documents/ Downloads/ Games/ Mail/ Pictures/ .config .local .minecraft .steam .mono .bash_logout .bash_profile .bashrc .gnupg .steampath .steampid .Xauthority .xprofile .zprofile'
 
 # Show items to backup (should have a confirmation method.)
+# Only the final operation in this loop does anything dangerous.
 echo -e [x] Items to Backup\\n
 for item in $INCLUDE
 do
@@ -40,6 +41,7 @@ do
         fi
     fi
     # Add each item and it's contents to a temporary directory.
+    # THE FOLLOWING IS TURNED OFF DURING TESTING:
     # cp -Lr $item $BACKUP_DIR/temp
 done
 
