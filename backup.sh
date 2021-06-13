@@ -17,7 +17,8 @@ else
 fi
 
 # Items to backup. THIS SHOULD BE LOADED FROM A PLAINTEXT FILE!
-INCLUDE='Documents/ Downloads/ Games/ Mail/ Pictures/ .config .local .minecraft .steam .mono .bash_logout .bash_profile .bashrc .gnupg .steampath .steampid .Xauthority .xprofile .zprofile'
+# These are some temporary defaults.
+INCLUDE='Documents/ Downloads/ Games/ Pictures/ .config .local .minecraft .steam .ssh .mono .bash_logout .bash_profile .bashrc .gnupg .Xauthority .xprofile .zprofile'
 
 # Show items to backup (should have a confirmation method.)
 # Only the final operation in this loop does anything dangerous.
