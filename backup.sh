@@ -12,11 +12,11 @@ if [[ -d $BACKUP_DIR ]]; then
     echo "[x] Backup Directory"
 else
     echo "[ ] Backup Directory"
-    echo "[*] Making directory /home/carlos/Backups..."
+    echo "[*] Making directory $BACKUP_DIR..."
     mkdir $BACKUP_DIR
 fi
 
-# Items to backup.
+# Items to backup. THIS SHOULD BE LOADED FROM A PLAINTEXT FILE!
 INCLUDE='Documents/ Downloads/ Games/ Mail/ Pictures/ .config .local .minecraft .steam .mono .bash_logout .bash_profile .bashrc .gnupg .steampath .steampid .Xauthority .xprofile .zprofile'
 
 # Show items to backup (should have a confirmation method.)
